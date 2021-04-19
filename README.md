@@ -6,7 +6,7 @@ This repository contrains our code for replicating the following papers:
 
 <span class="img_container center" style="display: block;">
     <p align="center">
-    <img alt="OnEndToEnd method overview" height=150 src="img/method.png" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
+    <img alt="OnEndToEnd method overview" height=250 src="img/method.png" style="display:block; margin-left: auto; margin-right: auto;" title="caption" />
     <br />
     <span class="img_caption" style="display: block; text-align: center;">Overview of the approach</span>
     </p>
