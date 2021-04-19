@@ -1,0 +1,66 @@
+# @package _global_
+
+root: ???
+metadata: ???
+diagonal: 0.219485 #in m
+drone_model: ["Tello"]
+
+keypoints:
+  [
+    #Centroid
+    [0.0,0.0,0.0],
+    #Front Upper Left Motor
+    [0.0467,0.0199,0.0360],
+    #Front Upper Right Motor
+    [-0.0477,0.0203,0.0355],
+    #Front Lower Left Motor
+    [0.0476, -0.0311, 0.0349],
+    #Front Lower Right Motor
+    [-0.0470, -0.0311, 0.0360],
+    #Back Upper Left Motor
+    [0.0470,0.0186,-0.0359],
+    #Back Upper Right Motor
+    [-0.0489,0.0199,-0.0370],
+    #Back Lower Left Motor
+    [0.0476,-0.0311,-0.0371],
+    #Back Lower Right Motor
+    [-0.0464, -0.0311, -0.0377]
+  ]
+
+
+data:
+  train:
+    iterator:
+      datasets:
+        UAVA:
+          root: ${root}
+          metadata: ${metadata}
+          split: "train"
+          views: ["exocentric"]
+          drones: ${drone_model}
+          frames: [0]
+          types: ["colour"]
+  
+  test:
+    iterator:
+      datasets:
+        UAVA:
+          root: ${root}
+          metadata:  ${metadata}
+          split: "test"
+          views: ["exocentric"]
+          drones: ${drone_model}
+          frames: [0]
+          types: ["colour"]
+  
+  val:
+    iterator:
+      datasets:
+        UAVA:
+          root:  ${root}
+          metadata:  ${metadata}
+          split: "test"
+          views: ["exocentric"]
+          drones: ${drone_model}
+          frames: [0]
+          types: ["colour"]

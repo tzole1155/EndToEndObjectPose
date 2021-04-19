@@ -1,0 +1,14 @@
+# @package _global_
+
+model:
+  supervision:
+    L1:
+      gt: [heatmaps_gt]
+      pred: [heatmaps_t_4]
+      out: [heatmap_loss]
+    
+    L2:
+      gt: [exocentric_0_points_3d]
+      pred: [projected_kpts_est]
+      weight: [0.00001]
+      out: [projection_loss]

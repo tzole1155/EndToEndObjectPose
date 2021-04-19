@@ -1,0 +1,9 @@
+# @package _global_
+
+model:
+  supervision:
+    L2:
+      gt: [predicted_kpts,exocentric_0_points_3d]
+      pred: [projected_kpts_est,projected_kpts_est]
+      #weight: [0.00001,0.00001]
+      out: [regularisation,projection]

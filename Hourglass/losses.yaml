@@ -1,0 +1,11 @@
+# @package _global_
+
+
+heatmaps_gt_4: [heatmaps_gt,heatmaps_gt,heatmaps_gt,heatmaps_gt]
+heatmaps_pred_4: [heatmaps_t_1,heatmaps_t_2,heatmaps_t_3,heatmaps_t_4]
+
+model:
+  supervision:
+    L1:
+      gt: ${heatmaps_gt_4}
+      pred: ${heatmaps_pred_4}
